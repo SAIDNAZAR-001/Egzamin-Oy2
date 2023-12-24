@@ -1,0 +1,109 @@
+/* BANNER - START*/
+
+.banner{
+
+    &-row{
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+        margin-top: 80px;
+
+        @include media(1145){
+            margin-top: 50px;
+        }
+        @include media(970){
+            margin-top: 30px;
+        }
+        @include media(740){
+            margin-top: 20px;
+        }
+        @include media(640){
+            margin-top: 0px;
+        }
+
+        img{
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__title{
+            width: 750px;
+            height: 160px;
+            color:$white-color;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 125%;
+            position: absolute;
+            z-index: 2;
+            bottom: 174px;
+            left: 80px;
+
+            @include media(1145){
+                font-size: 50px;
+                bottom: 150px;
+            }
+            @include media(970){
+                font-size: 40px;
+                bottom: 120px;
+            }
+            @include media(900){
+                display: none;
+            }
+        }
+        &__sobtitle{
+            @extend %flex-between;
+            gap: 25px;
+            position: absolute;
+            z-index: 2;
+            bottom: 84px;
+            left: 80px;
+
+            @include media(900){
+                bottom: 50px;
+            }
+            @include media(640){
+                left: 50px;
+            }
+            @include media(550){
+                left: 30px;
+                bottom: 30px;
+            }
+
+            p{
+                color: $white-color;
+                font-size: 25px;
+                font-weight: 400;
+
+                @include media(1145){
+                    font-size: 20px;
+                }
+                @include media(900){
+                    width: 100%;
+                    font-size: 25px;
+                }
+                @include media(640){
+                    font-size: 20px;
+                }
+                @include media(430){
+                    font-size: 15px;
+                }
+            }
+            &__buttons{
+                border-radius: 50%;
+                border: 1px solid $white-color;
+
+                @include media(900){
+                    display: none;
+                }
+
+                &:hover{
+                    background-color: #ecebea7c;
+                }
+            }
+        }
+    }
+}
+
+/* BANNER - END*/

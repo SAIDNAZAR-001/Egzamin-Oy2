@@ -1,0 +1,124 @@
+/* PROGRAMS - START*/
+
+.programs{
+    width: 100%;
+    height: 100%;
+
+    &-row{
+        width: 100%;
+        height: 100%;
+
+        &__header{
+            @extend %flex-between;
+            justify-content: space-between;
+
+            &__text{
+                color: $black-color;
+                font-size: 39px;
+                font-weight: 600;
+
+                @include media(600){
+                    font-size: 25px;
+                }
+
+                span{
+                    color: $orange-color;
+                    font-size: 39px;
+                    font-weight: 600;
+
+                    @include media(600){
+                         font-size: 25px;
+                        color: $black-color;
+                    }
+                }
+            }
+            &__buttons{
+                display: inline-flex;
+                padding: 18px 36px;
+                align-items: flex-start;
+                gap: 10px;
+                border-radius: 8px;
+                border: 1px solid $black2-color;
+                background: $white-color;
+
+                @include media(600){
+                    padding: 12px 24px;
+                }
+
+                p{
+                    color: $black-color;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__footer{
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-between;
+
+            @include media(1420){
+                overflow-x: scroll;
+                flex-wrap: nowrap;
+                gap: 20px;
+            }
+
+            &__img1{
+                width: 24%;
+                height: 260px;
+                min-width: 340px;
+                min-height: 260px;
+                border-radius: 16px;
+                position: relative;
+                z-index: 2;
+
+                img{
+                    border-radius: 16px;
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                &__text{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    position: absolute;
+                    z-index: 2;
+                    padding: 165px 24px 24px 24px;
+
+                    &__title{
+                        color: $white-color;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    &__sobtitle{
+                        @extend %flex-between;
+                        justify-content: space-between;
+
+                        &__left{
+                            @extend %flex-between;
+                            gap: 5px;
+
+                            &__text{
+                                color: $white-color;
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                        }
+                        &_right{
+                            color: $white-color;
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* PROGRAMS - END*/
