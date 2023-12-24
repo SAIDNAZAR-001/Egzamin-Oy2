@@ -1,0 +1,32 @@
+/* HEADER - START*/
+
+.header{
+    &-row{
+  @include flex(center, space-between);
+    }
+    &-logo{
+        font-size: 24px;
+
+        @include media(910){
+            color: $red-color;
+        }
+    }
+    &-buttons{
+
+        button{
+            font-size: 24px;
+            padding: 10px 20px;
+            border: 1px solid $black-color;
+
+            @include media(910){
+                color: $red-color;
+            }
+
+            &:hover{
+                background-color: $green-color;
+            }
+        }
+    }
+}
+
+/* HEADER - END*/
